@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+  <title>Welcome To Registration Form</title>
+
+  <script type="text/javascript">
+       function registration()
+    {
+
+        var uname= document.getElementById("t1").value;
+        var email= document.getElementById("t2").value;
+        var pwd= document.getElementById("t3").value;           
+        var cpwd= document.getElementById("t4").value;
+        
+        var email= /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        var pwd_expression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/;
+        var letters = /^\S*$/;
+
+;
+       
+       if(uname=='')
+        {
+            alert('Please enter the user name.');
+            }
+        else if(!letters.test(uname))
+        {
+            alert('User name should not have space ');
+        } 
+        if(email=='')
+        {
+            alert('Please enter your user email id');
+        }
+        else if (!filter.test(email))
+        {
+            alert('Invalid email');
+        }
+        
+        else if(pwd=='')
+        {
+            alert('Please enter Password');
+        }
+        else if(cpwd=='')
+        {
+            alert('Enter Confirm Password');
+        }
+        else if(!pwd_expression.test(pwd))
+        {
+            alert ('Upper case, Lower case, Special character and Numeric letter are required in Password filed');
+        }
+        else if(pwd != cpwd)
+        {
+         alert ('Password not Matched');
+        }
+        else if(document.getElementById("t4").value.length < 6)
+        {
+            alert ('Password minimum length is 6');
+        }
+        else if(document.getElementById("t4").value.length > 12)
+        {
+            alert ('Password max length is 12');
+        }
+        else
+        {                                           
+               alert('Thank You for Registration & You are Redirecting to Website');
+    }
+}
+  </script>
+  </head>
+
+    <body>
+<div style="background-color:yellowgreen",padding: 30px>
+    <div id="main">
+    <div class="h-tag">
+
+ 
+    <h2 align="center">New User Registration</h2>
+    </div>
+    <div class="login">
+    <table cellspacing="2" align="center" cellpadding="8" border="0">
+    <tr>
+    <td align="right">Enter Username :</td>
+    <td><input type="text" placeholder="Enter Username here" id="t1" class="tb" /></td>
+    </tr>
+    <tr>
+    <td align="right">Enter Email ID :</td>
+    <td><input type="text" placeholder="Enter Email ID here" id="t2" class="tb" /></td>
+    </tr>
+    <tr>
+    <td align="right">Enter Password :</td>
+    <td><input type="password" placeholder="Enter Password here" id="t3" class="tb" /></td>
+    </tr>
+    <tr>
+    <td align="right">Enter Confirm Password :</td>
+    <td><input type="password" placeholder="Enter Password here" id="t4" class="tb" /></td>
+     </tr>
+    <tr>
+    <td align="right">
+    <input type="submit" value="Submit" class="btn" onclick="registration()" /></td>
+    </tr>
+    </table>
+    </div>
+</div>
+    </div>
+    </body>
+    </html>

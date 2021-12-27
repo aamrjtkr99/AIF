@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function removeDuplicates(arr)
+{
+	let set = new Set();
+	
+	for(let i = 0; i < arr.length; i++)
+		set.add(arr[i]);
+	
+	document.write("[" + Array.from(set).join(", ") + "]");
+}
+
+let arr = [ 1, 2, 5, 1, 7, 2, 4, 2 ];
+
+removeDuplicates(arr);
+
+</script>
+</body>
+</html>
