@@ -12,9 +12,9 @@
         var pwd= document.getElementById("t3").value;           
         var cpwd= document.getElementById("t4").value;
         
-        var email= /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-        var pwd_expression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/;
-        var letters = /^\S*$/;
+        var Email= /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        var pwd_expression = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-])/
+        var letters = /^\S*$/
 
 ;
        
@@ -30,7 +30,7 @@
         {
             alert('Please enter your user email id');
         }
-        else if (!filter.test(email))
+        else if (!Email.test(email))
         {
             alert('Invalid email');
         }
